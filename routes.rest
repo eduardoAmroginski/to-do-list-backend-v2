@@ -19,8 +19,8 @@ Content-Type: application/json
 }
 ###
 
-### POST - Criar nova nota
-POST http://localhost:3000/tasks
+### POST - Criar nova task
+POST http://localhost:3000/tasks/create
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
 
@@ -31,37 +31,37 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN
 }
 ###
 
-### GET - busca nota por ID
+### GET - busca task por ID
 GET http://localhost:3000/tasks/617b0d8ab0357bbc683e4320
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
 ###
 
-### GET - busca todas as nota do usuário
+### GET - busca todas as tasks do usuário
 GET http://localhost:3000/tasks
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3OTcyMzAsImV4cCI6MTYzNjA1NjQzMH0.MoBfjTjMQgi0ynqHUpAAC041i5FqOGiUX824TVHxPTA
 ###
 
-### PUT - Atualiza nota
-PUT http://localhost:3000/tasks/617fe9018918a2ef90a78b13
+### PUT - Atualiza task
+PUT http://localhost:3000/tasks/update/61804f3940a3195e2530c832
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3OTg4MTksImV4cCI6MTYzNjA1ODAxOX0.t3HhX-zpOdeGpr6WeOZz_2nSPipTg2e2rU9WDmru-Kw
 
 {
-    "title": "Titulo 1.2",
+    "title": "Titulo 1.3",
     "description": "Lorem Ipsum dolor",
     "done": false
 }
 ###
 
-### DELETE - Deleta a nota
+### DELETE - Deleta a task
 DELETE http://localhost:3000/tasks/617b24f38b264763938c431e
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsImlhdCI6MTYzNTQ1MzcyMCwiZXhwIjoxNjM1NzEyOTIwfQ.xQNp1TLHhaSU-f6kha3KFq6hlQmyEY3UqFu7KfqQ3dg
 ###
 
-### GET - busca todas as nota do usuário
+### GET - busca todas as task do usuário
 GET http://localhost:3000/tasks/search?query=titulo
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsImlhdCI6MTYzNTQ1MzcyMCwiZXhwIjoxNjM1NzEyOTIwfQ.xQNp1TLHhaSU-f6kha3KFq6hlQmyEY3UqFu7KfqQ3dg

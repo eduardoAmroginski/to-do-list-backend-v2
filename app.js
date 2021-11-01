@@ -8,6 +8,9 @@ import "./config/database.js";
 import usersRouter from "./app/routes/users.js";
 import tasksRouter from "./app/routes/tasks.js";
 
+import swaggerUI from "swagger-ui-express";
+import swaggerDocument from "./swagger.js";
+
 const PORT = process.env.PORT || 3400;
 
 var app = express();
@@ -21,6 +24,7 @@ app.use(cors());
 
 app.use("/users", usersRouter);
 app.use("/tasks", tasksRouter);
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.listen(PORT, () => {
   console.log("Server is Running at ", PORT);
