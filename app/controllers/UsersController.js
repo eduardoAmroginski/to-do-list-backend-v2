@@ -16,7 +16,7 @@ class UsersController {
       res.status(200).json(user);
     } catch (error) {
       if (error.keyPattern["email"] == 1) {
-        res.status(500).json({ error: "Email has already been registered" });
+        res.status(401).json({ error: "Email has already been registered" });
       } else {
         res.status(500).json({ error: "Error registering new user" });
       }
