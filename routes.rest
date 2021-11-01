@@ -1,0 +1,68 @@
+### POST - Registro de usuário
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "name": "teste1",
+    "email": "teste1@teste.com",
+    "password": "123456"
+}
+###
+
+### POST - Login de usuário
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "teste1@teste.com",
+    "password": "123456"
+}
+###
+
+### POST - Criar nova nota
+POST http://localhost:3000/tasks
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
+
+{
+    "title": "Titulo 3",
+    "description": "Lorem Ipsum dolor",
+    "done": false
+}
+###
+
+### GET - busca nota por ID
+GET http://localhost:3000/tasks/617b0d8ab0357bbc683e4320
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
+###
+
+### GET - busca todas as nota do usuário
+GET http://localhost:3000/tasks
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
+###
+
+### PUT - Atualiza nota
+PUT http://localhost:3000/tasks/617fe9018918a2ef90a78b13
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20iLCJpYXQiOjE2MzU3NzI2MTIsImV4cCI6MTYzNjAzMTgxMn0.1n8-v5nN2w8NYNf7NOdjPZzgmRBAB7doB3NhJk0CXAU
+
+{
+    "title": "Titulo 1.2",
+    "description": "Lorem Ipsum dolor",
+    "done": false
+}
+###
+
+### DELETE - Deleta a nota
+DELETE http://localhost:3000/tasks/617b24f38b264763938c431e
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsImlhdCI6MTYzNTQ1MzcyMCwiZXhwIjoxNjM1NzEyOTIwfQ.xQNp1TLHhaSU-f6kha3KFq6hlQmyEY3UqFu7KfqQ3dg
+###
+
+### GET - busca todas as nota do usuário
+GET http://localhost:3000/tasks/search?query=titulo
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsImlhdCI6MTYzNTQ1MzcyMCwiZXhwIjoxNjM1NzEyOTIwfQ.xQNp1TLHhaSU-f6kha3KFq6hlQmyEY3UqFu7KfqQ3dg
+###
